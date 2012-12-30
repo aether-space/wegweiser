@@ -52,7 +52,7 @@ class _PyramidDirective(Directive):
         env = self.state.document.settings.env
         if route["doc"]:
             env.pyramid_routes[env.docname].add(route["doc"][0])
-        route_id = "route-{}".format(env.new_serialno("route"))
+        route_id = "route-{0}".format(env.new_serialno("route"))
         route_node = nodes.section(ids=[route_id])
         route_node += nodes.title(text=self._strip_prefix(route["pattern"]))
         route_node += self._render_request_methods(route)
@@ -165,7 +165,7 @@ class PyramidRoutesDirective(_PyramidDirective):
         try:
             renderer = self.group_renderer[group_by]
         except KeyError:
-            raise self.error("Invalid group: {!r}".format(group_by))
+            raise self.error("Invalid group: {0!r}".format(group_by))
         else:
             return renderer(self, routes)
 
