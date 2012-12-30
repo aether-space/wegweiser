@@ -29,18 +29,12 @@ import argparse
 import inspect
 import json
 import operator
-import os
 import sys
 
 from pyramid import interfaces, paster, traversal
 from pyramid.request import Request
 from zope.interface import providedBy
 
-
-def usage():
-    "Prints the usage to ``sys.stderr``."
-    prog_name = os.path.basename(sys.argv[0])
-    sys.stderr.write("Usage: {} <config> [<grouping key>]\n".format(prog_name))
 
 def find_view(registry, route):
     """Given a registry and a route, try to find the corresponding view
