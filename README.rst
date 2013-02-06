@@ -16,6 +16,20 @@ Limitations
 * Multi-views aren't supported
 
 
+Documentation
+=============
+
+Either read it online at http://buffer.io/+wegweiser/docs/dev/ or
+built it yourself from the Sphinx sources in the ``docs`` directory.
+
+
+Development
+===========
+
+Found some issues or just want to get the source? Check out
+Wegweiser's `Github page <https://github.com/bufferio/wegweiser>`_.
+
+
 License
 =======
 
