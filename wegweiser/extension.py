@@ -52,7 +52,8 @@ class _PyramidDirective(Directive):
         env = self.state.document.settings.env
         if route["doc"]:
             env.pyramid_routes[env.docname].add(route["doc"][0])
-        route_id = "route-{0}".format(env.new_serialno("route"))
+        serialno = env.new_serialno(route["name"])
+        route_id = "route-{0}-{1}".format(route["name"], serialno)
         route_node = nodes.section(ids=[route_id])
         route_node += nodes.title(text=self._strip_prefix(route["pattern"]))
         route_node += self._render_request_methods(route)
